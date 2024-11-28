@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automate Resume Screening</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7) !important;
+        }
+        .navbar-nav .nav-link {
+            color: white !important;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ffecd2 !important;
+        }
+        .upload-section {
+            background-color: white;
+            padding: 30px;
+            margin: 50px auto;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .custom-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .custom-btn:hover {
+            background-color: #218838;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand text-white" href="#">Resume Screener</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="upload-section mt-5">
+            <h2 class="text-center mb-4">Upload Your Resume</h2>
+            <form action="/upload" method="post" enctype="multipart/form-data" class="text-center">
+                <div class="form-group">
+                    <textarea name="job_description" class="form-control" placeholder="Enter Job Description" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for ="resumes">Upload Resume</lable>
+                        <p>Please Upload Resume more than 5</p>
+                    <input type="file" name="resumes" accept=".pdf, .docx, .txt" class="form-control-file" multiple required>
+                </div>
+                <button type="submit" class="custom-btn">Upload</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Automate Resume Screening. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
